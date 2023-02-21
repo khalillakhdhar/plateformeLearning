@@ -36,6 +36,6 @@ public class Etudiant extends Utilisateur {
 	 private List<Cours> cours=new ArrayList<Cours>();
 	 @OneToOne(fetch = FetchType.LAZY,
 	            cascade =  CascadeType.ALL,
-	            mappedBy = "utisateur")
+	            mappedBy = "utilisateur")
 	    private Evaluation evaluation;
 }

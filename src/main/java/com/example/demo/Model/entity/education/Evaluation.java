@@ -38,7 +38,7 @@ public class Evaluation {
 	private int evaluation;
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "utilisateur_id", nullable = false)
-    private Utilisateur utisateur;
+    private Utilisateur utilisateur;
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "cours_id", nullable = false)
     private Cours cours;
