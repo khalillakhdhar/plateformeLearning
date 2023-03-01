@@ -3,10 +3,11 @@ package com.example.demo.controllers.services.education;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.Model.entity.education.Evaluation;
 import com.example.demo.Model.repositories.education.EvaluationRepository;
-
+@Service
 public class EvaluationService implements EvaluationInterface {
 	@Autowired
 	private EvaluationRepository evaluationRepo;

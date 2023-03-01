@@ -8,5 +8,4 @@ import com.example.demo.Model.entity.education.Cours;
 import com.example.demo.Model.entity.users.Etudiant;
 
 public interface EtudiantRepository extends PagingAndSortingRepository<Etudiant, Long> {
-List<Etudiant> findByCours(List<Cours> cours);
 }

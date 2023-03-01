@@ -1,4 +1,4 @@
-package com.example.demo.communication;
+package com.example.demo.controllers.services.communication;
 
 import java.util.List;
 

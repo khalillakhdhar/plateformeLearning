@@ -1,13 +1,14 @@
-package com.example.demo.communication;
+package com.example.demo.controllers.services.communication;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.Model.entity.communication.Messagerie;
 import com.example.demo.Model.repositories.communication.MessagerieRepository;
 
-
+@Service
 public class MessageService implements MessageInterface {
 	@Autowired
 	private MessagerieRepository messageRepo;
