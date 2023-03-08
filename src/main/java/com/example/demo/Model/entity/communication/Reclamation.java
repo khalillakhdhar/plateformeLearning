@@ -7,6 +7,10 @@ import lombok.Data;
 @Entity
 @Data
 public class Reclamation extends Messagerie {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 private String type;
 @Email
 private String email;
