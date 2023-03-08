@@ -10,8 +10,8 @@ import com.example.demo.controllers.services.user.UtilisateurService;
 
 @SpringBootApplication
 public class PlateformeLearningApplication implements CommandLineRunner {
-	//@Autowired
-	//UtilisateurService usService;
+	@Autowired
+	UtilisateurService usService;
 	public static void main(String[] args) {
 		SpringApplication.run(PlateformeLearningApplication.class, args);
 	}
@@ -19,7 +19,7 @@ public class PlateformeLearningApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-/*
+
 		
 		Utilisateur us=new Utilisateur(0,"us1", "user1", "20111222", "Tunisie", "user1@gmail.com","userpass1", "user");
 		Utilisateur us2=new Utilisateur(0,"us2", "user2", "20111233", "Tunisie", "user2@gmail.com","userpass2", "user2");
@@ -38,6 +38,6 @@ usService.DeleteOne(u2.getId());
 		
 		
 	
-*/
+
 	}
 }
