@@ -10,8 +10,8 @@ import com.example.demo.controllers.services.user.UtilisateurService;
 
 @SpringBootApplication
 public class PlateformeLearningApplication implements CommandLineRunner {
-	@Autowired
-	UtilisateurService usService;
+	//@Autowired
+	//UtilisateurService usService;
 	public static void main(String[] args) {
 		SpringApplication.run(PlateformeLearningApplication.class, args);
 	}
