@@ -1,11 +1,14 @@
 package com.example.demo.Model.entity.education;
 
+import java.io.Serializable;
+
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.example.demo.Model.entity.users.Enseignant;
 import com.example.demo.Model.entity.users.Utilisateur;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
@@ -23,8 +26,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
+
 @NoArgsConstructor
-public class Matiere {
+public class Matiere implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

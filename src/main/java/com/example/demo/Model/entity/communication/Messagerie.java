@@ -12,6 +12,7 @@ import org.springframework.data.annotation.CreatedDate;
 import com.example.demo.Model.entity.users.Utilisateur;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.DiscriminatorColumn;
@@ -33,6 +34,8 @@ import lombok.Data;
 @Data
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "mode")
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
+
 public class Messagerie implements Serializable {
 /**
 	 * 

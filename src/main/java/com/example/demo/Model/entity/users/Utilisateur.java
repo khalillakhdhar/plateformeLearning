@@ -2,6 +2,8 @@ package com.example.demo.Model.entity.users;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
@@ -29,6 +31,8 @@ import lombok.ToString;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "type")
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
+
 public  class  Utilisateur  implements Serializable {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)

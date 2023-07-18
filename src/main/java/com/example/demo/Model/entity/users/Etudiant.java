@@ -1,10 +1,12 @@
 package com.example.demo.Model.entity.users;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.example.demo.Model.entity.education.Cours;
 import com.example.demo.Model.entity.education.Evaluation;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -21,7 +23,9 @@ import lombok.Data;
 @Entity
 @Data
 @AllArgsConstructor
-public class Etudiant extends Utilisateur {
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
+
+public class Etudiant extends Utilisateur implements Serializable {
 
 	@Column(nullable = false)
 	@NotBlank
